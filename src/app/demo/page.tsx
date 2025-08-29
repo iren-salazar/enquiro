@@ -64,12 +64,11 @@ export default function DemoPage() {
               </button>
             </Link>
           </div>
-          <button
-            className="bg-transparent border border-[#00FF41] text-[#00FF41] font-bold px-8 py-3 rounded transition hover:bg-[#00FF41]/10 mt-4"
-            onClick={() => router.push("/demo")}
-          >
-            Watch Demo
-          </button>
+          <Link href="/demo">
+            <button className="bg-transparent border border-[#00FF41] text-[#00FF41] font-bold px-8 py-3 rounded transition hover:bg-[#00FF41]/10 mt-4">
+              Watch Demo
+            </button>
+          </Link>
         </div>
       </section>
     </main>
