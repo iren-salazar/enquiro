@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function DemoPage() {
+  const router = useRouter();
+
   return (
     <main className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
       {/* Background Circuit Lines */}
@@ -61,6 +64,12 @@ export default function DemoPage() {
               </button>
             </Link>
           </div>
+          <button
+            className="bg-transparent border border-[#00FF41] text-[#00FF41] font-bold px-8 py-3 rounded transition hover:bg-[#00FF41]/10 mt-4"
+            onClick={() => router.push("/demo")}
+          >
+            Watch Demo
+          </button>
         </div>
       </section>
     </main>
