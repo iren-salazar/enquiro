@@ -9,7 +9,12 @@ export default function LoginPage() {
           src="/enquiro-imgs/imitated_circuit_background.png"
           alt="Circuit Background"
           fill
-          style={{ objectFit: "cover", opacity: 0.25 }}
+          style={{
+            objectFit: "cover",
+            opacity: 0.5, // Increased opacity for better visibility
+            filter: "brightness(1.2)", // Slightly brighter for more contrast
+            transition: "opacity 0.3s, filter 0.3s",
+          }}
           priority
         />
       </div>
