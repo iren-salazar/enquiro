@@ -66,8 +66,8 @@ export default function Home() {
           fill
           style={{
             objectFit: "cover",
-            opacity: darkMode ? 0.25 : 0.08,
-            filter: darkMode ? "none" : "invert(1) brightness(1.2)",
+            opacity: darkMode ? 0.5 : 0.2, // Increased opacity for better visibility
+            filter: darkMode ? "brightness(1.2)" : "invert(1) brightness(1.1)",
             transition: "opacity 0.3s, filter 0.3s",
           }}
           priority
