@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function RegisterPage() {
+  const router = useRouter();
+
   return (
     <main className="min-h-screen bg-black text-white font-sans relative flex items-center justify-center overflow-hidden">
       {/* Background Circuit Lines */}
@@ -36,9 +39,9 @@ export default function RegisterPage() {
             </button>
           </form>
           <p className="text-gray-400 text-sm">
-            Already have an account?{" "}
-            <Link href="/login" className="text-[#00FF41] hover:underline">
-              Log In
+            Don&apos;t have an account?{" "}
+            <Link href="/register" className="text-[#00FF41] hover:underline">
+              Sign Up
             </Link>
           </p>
         </div>
