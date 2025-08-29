@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -102,28 +103,30 @@ export default function Home() {
           >
             Get Started
           </button>
-          <button
-            className={`border border-gray-400 font-semibold px-8 py-3 rounded flex items-center justify-center gap-2 transition w-full sm:w-auto ${
-              darkMode
-                ? "text-white hover:bg-gray-900"
-                : "text-black hover:bg-gray-200"
-            }`}
-          >
-            <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
-              <circle
-                cx="12"
-                cy="12"
-                r="11"
-                stroke={darkMode ? "#fff" : "#111"}
-                strokeWidth="2"
-              />
-              <polygon
-                points="10,8 16,12 10,16"
-                fill={darkMode ? "#fff" : "#111"}
-              />
-            </svg>
-            Watch Demo
-          </button>
+          <Link href="/demo">
+            <button
+              className={`border border-gray-400 font-semibold px-8 py-3 rounded flex items-center justify-center gap-2 transition w-full sm:w-auto ${
+                darkMode
+                  ? "text-white hover:bg-gray-900"
+                  : "text-black hover:bg-gray-200"
+              }`}
+            >
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="11"
+                  stroke={darkMode ? "#fff" : "#111"}
+                  strokeWidth="2"
+                />
+                <polygon
+                  points="10,8 16,12 10,16"
+                  fill={darkMode ? "#fff" : "#111"}
+                />
+              </svg>
+              Watch Demo
+            </button>
+          </Link>
         </div>
       </section>
 
